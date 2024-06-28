@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Problem GlobalCare Bridge is addressing</title>
+        <style>
+            body{
+                background-color:#F5FFC5;
+            }
+
+
+            .white{
+                width: 100%;
+                height: 220%;
+                position: absolute;
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .btn{
+                padding: 15px 40px;
+                border: none;
+                outline:none;
+                color:#F5FFC5;
+                cursor: pointer;
+                position: relative;
+                z-index:0;
+                border-radius: 12px;  
+ 
+            }
+
+            .btn::after{
+                content: "";
+                z-index: -1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #61B294;
+                left:0;
+                top: 0;
+                border-radius:10px;
+
+            }
+
+            .btn::before{
+               content: ""; 
+               background: linear-gradient(45deg,#3b8132,#46923c,#52a447,#5bb450,#72bf6a,#8bca84,#acd8a7,#cce7c9);
+               position:absolute;
+               top: -2px;
+               left:-2px;
+               background-size: 600px;
+               z-index: -1;
+               width: calc(100% + 4px);
+               height: calc(100% + 4px);
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+               transition:opacity .3s ease-in-out;
+               border: radius 10px;
+               opacity:1;
+            }
+
+               /*infinite*/
+               .btn:hover::before {
+               opacity: 1;
+               }
+            .btn:active:after {
+               background: transparent; 
+
+            }
+
+            .btn:active {
+                color:#cce7c9;
+                font-weight:bold;
+
+
+            }
+
+
+
+
+            @keyframes glowing {
+                0% {background-position: 0 0;}
+                50% {background-position: 400% 0;}
+                100% {background-position: 0 0;}
+            }
+
+
+            /*styling slider*/
+
+            .container {
+                padding: 2rem;
+            }
+
+            .slider-wrapper {
+               position:relative;
+               max-width: 48rem;
+               margin: 0 auto; 
+
+            }
+
+            .slider {
+               display: flex;
+               aspect-ratio: 16 / 9;
+               scale: 1.5;
+               overflow-x: auto;
+               scroll-snap-type: x mandatory;
+               scroll-behavior: smooth;
+               box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+               border-radius: 0.5rem;
+            }
+
+            .slider img{
+               flex: 1 0 100%;
+               scroll-snap-align: start;
+               
+
+
+            }
+             .slider-nav {
+                display: flex;
+                column-gap: 1rem;
+                position: absolute;
+                bottom: 1.25rem;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+
+             }
+
+             .slider-nav a {
+               width: 0.5rem; 
+               height: 0.5rem;
+               border-radius: 50%;
+               background-color: #fff;
+               opacity: 0.75;
+               transition: opacity ease 250ms;
+
+
+             }
+
+             .slider-nav a:hover {
+                opacity:1 ;
+             }
+            
+        </style>
+    </head>
+
+    <body>
+<p><section style="background-color: #F5FFC5;">
+    <img src="c:\Users\isabe\Downloads\page3new.png" alt="statistic" style="margin-left:40px;">
+</section></p>
+    
+<img src="c:\Users\isabe\Downloads\page4 (2).png" alt="hospital, doctors, and nurses in low income countries" style="margin-left: 40px;">
+    <br><br><br><br><br><br><br><br><br><br>
+    <img src="c:\Users\isabe\Downloads\page5 (2).png" alt="statistics" style="margin-left: 40px;">
+    <br><br><br><br>
+
+<p style="background-color: white;">      
+        <img src="c:\Users\isabe\Downloads\pg6.png" alt="Life expectancy table" style="margin-left: 40px;">
+        <br><br><br>
+        <img src="c:\Users\isabe\Downloads\pg7.png" alt="Life expectancy vs Healthcare expenditure graph"style="margin-left: 40px;">
+</p>   
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<section class="container" >
+
+<div class="slider-wrapper">
+    <div  class="slider">
+        <img id="slide-1" src="c:\Users\isabe\Downloads\page 8.png" alt="3 major diseases">
+        <img id="slide-2" src="c:\Users\isabe\Downloads\page9.png" alt="HIV disease">
+        <img id="slide-3" src="c:\Users\isabe\Downloads\pg10.png" alt="CVD major disease">
+        <img id="slide-4" src="c:\Users\isabe\Downloads\page 11.png" alt=" Tuberculosis major disease">
+    </div>
+
+    <div class="slider-nav">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+        <a href="#slide-4"></a>
+    </div>
+</div>
+</section>
+   
+<br><br><br><br><br><br><br><br><br><br><br>
+    <button class="btn" style="background-color: #61B294;margin-left: 650px;">
+       <a href="https://ourworldindata.org/hiv-aids#:~:text=Almost%201%20million%20people%20die%20from%20HIV/AIDS" target="_blank" style="text-decoration: none;color: #F5FFC5;font-size: 20px; ">Learn more about HIV</a>
+    </button>
+    <br><br><br>
+    
+    <button class="btn" style="background-color: #61B294;margin-left: 650px;">
+        <a href="https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)" target="_blank" style="text-decoration: none;color: #F5FFC5;font-size: 20px;">
+             Learn more about CVD </a>
+    </button>
+    <br><br><br>
+   
+    <button class="btn" style="background-color: #61B294;margin-left: 650px;">
+        <a href="https://ourworldindata.org/tuberculosis" target="_blank" style="text-decoration: none;color: #F5FFC5;font-size: 20px;">
+             Learn more about TB </a>
+    </button>
+<br><br>
+    <h1 style="color: #61B294;">
+       <a href="GlobalCare Bridge.html" style="text-decoration: none; color: #61B294;font-size: 20px;"> Return Home </a>
+    </h1>
+
+
+  
+</body> 
+</html>

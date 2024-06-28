@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Assessment Form from GlobalCare Bridge</title>
+
+    <style>
+        body{
+            background-color:#F5FFC5 ;
+        }
+
+        h1{
+            color:#61B294; ;
+        }
+
+        .btn{
+                padding: 15px 40px;
+                border: none;
+                outline:none;
+                color:#F5FFC5;
+                cursor: pointer;
+                position: relative;
+                z-index:0;
+                border-radius: 12px;  
+ 
+            }
+
+            .btn::after{
+                content: "";
+                z-index: -1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #61B294;
+                left:0;
+                top: 0;
+                border-radius:10px;
+
+            }
+
+            .btn::before{
+               content: ""; 
+               background: linear-gradient(45deg,#3b8132,#46923c,#52a447,#5bb450,#72bf6a,#8bca84,#acd8a7,#cce7c9);
+               position:absolute;
+               top: -2px;
+               left:-2px;
+               background-size: 600px;
+               z-index: -1;
+               width: calc(100% + 4px);
+               height: calc(100% + 4px);
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+               transition:opacity .3s ease-in-out;
+               border: radius 10px;
+               opacity:1;
+            }
+
+               /*infinite*/
+               .btn:hover::before {
+               opacity: 1;
+               }
+            .btn:active:after {
+               background: transparent; 
+
+            }
+
+            .btn:active {
+                color:#cce7c9;
+                font-weight:bold;
+
+
+            }
+
+
+
+
+            @keyframes glowing {
+                0% {background-position: 0 0;}
+                50% {background-position: 400% 0;}
+                100% {background-position: 0 0;}
+            }
+
+    </style>
+</head>
+<body>
+ 
+     <h1 style="text-align: center;font-size: 70px;">
+       <b> Meet Regard! </b>
+     </h1>
+
+    <img src="c:\Users\isabe\Downloads\pg12.png">
+
+    <h2 style="text-align: center;color: #61B294;">
+        Our team have created create an AI for people who live in developing countries 
+        to receive medical care by connecting them to healthcare services around the 
+        world.
+        <br><br>
+        Our data visualizations and the form below provides Regard the insight it needs
+         to make effective diagnosis or connections based on factors such as the area 
+         in which an individual lives in, the resources available, etc.
+    </h2>
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <h1 style="text-align: center;text-decoration: underline;">Health Assessment Form</h1>
+    <br><br><br>
+    <form action="/submit" method="post" >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country"><br>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state"><br>
+
+        <label for="number">Phone Number:</label>
+        <input type="tel" id="number" name="number" pattern="[0-9]{10}" placeholder="1234567890" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="medications">Current Medication(s):</label>
+        <textarea id="medications" name="medications"></textarea><br>
+
+        <label for="physician">Physician:</label>
+        <input type="text" id="physician" name="physician"><br>
+        <label for="symptoms">Symptoms/Health Concerns:</label>
+        <textarea id="symptoms" name="symptoms"></textarea><br>
+
+        <label for="necessities">Necessities:</label>
+        <textarea id="necessities" name="necessities"></textarea><br>
+
+        <label for="resources">Lack of Resources:</label>
+        <textarea id="resources" name="resources"></textarea><br>
+
+        <label for="stage">Stage of Implication:</label>
+        <input type="text" id="stage" name="stage"><br>
+
+        <label for="conditions">Condition(s):</label>
+        <textarea id="conditions" name="conditions"></textarea><br>
+
+        <label for="religion">Religion:</label>
+        <input type="text" id="religion" name="religion"><br>
+        <label for="language">Language:</label>
+        <input type="text" id="language" name="language"><br>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <br><br>
+   <img src="c:\Users\isabe\Downloads\pg13.png" style="margin-left: 100px;">
+
+   <br><br> 
+
+   <button class="btn" style="background-color: #61B294;margin-left: 620px;">
+    <a href="https://ourworldindata.org/hiv-aids#:~:text=Almost%201%20million%20people%20die%20from%20HIV/AIDS" target="_blank" style="text-decoration: none;color: #F5FFC5;font-size: 20px; ">I can make a change</a>
+ </button>
+
+</body>
+</html>
